@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar Recibo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <label for="emitente">Nome do Emitente:</label>
+            <input type="text" name="emitente" id="emitente">
+            <label for="Pagante">Quem pagou:</label>
+            <input type="text" id="pagante" name="pagante">
+            <label for="valor">Valor do Recebido:</label>
+            <input type="number" step="0.01" id="valor" name="valor">
+            <button onclick="gerarRecibo()">Gerar Recibo</button>
+        </div>
+
+        <div class="print">
+            <h1 id="print_eminente"></h1>
+            <p>Pago por - <span class="print_text" id="print_pagador"></span></p>
+            <p>Data do Recibo: <span span class="print_text" id="print_data"></span></p>
+            <p>Valor recebido - R$ <span class="print_text" id="print_valor"></span></p>
+            <div class="assinatura"><span class="print_text" id="assinatura">Assinatura</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
